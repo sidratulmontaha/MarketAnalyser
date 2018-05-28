@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FC34D990-AB0A-4EA8-BD9F-AE9D734C16B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MarketAnalyser</RootNamespace>
+    <AssemblyName>MarketAnalyser</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics4.Shared.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinChart.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTree.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.v12.1, Version=12.1.20121.2135, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuyerSellerPriceChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyerSellerPriceChart.Designer.cs">
+      <DependentUpon>BuyerSellerPriceChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuyerSellerRatioChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyerSellerRatioChart.Designer.cs">
+      <DependentUpon>BuyerSellerRatioChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataDownloader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataDownloader.Designer.cs">
+      <DependentUpon>DataDownloader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EODSnapshotViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EODSnapshotViewer.Designer.cs">
+      <DependentUpon>EODSnapshotViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EODSnapshotDataManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EODSnapshotDataManager.Designer.cs">
+      <DependentUpon>EODSnapshotDataManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntradayAggregateQuartiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntradayAggregateQuartiles.Designer.cs">
+      <DependentUpon>IntradayAggregateQuartiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntradayAggregateQuartilesGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntradayAggregateQuartilesGraph.Designer.cs">
+      <DependentUpon>IntradayAggregateQuartilesGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntradayBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntradayBrowser.Designer.cs">
+      <DependentUpon>IntradayBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntradayDataCleaner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntradayDataCleaner.Designer.cs">
+      <DependentUpon>IntradayDataCleaner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntradayRecorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntradayRecorder.Designer.cs">
+      <DependentUpon>IntradayRecorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntradayRecorderRevamp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntradayRecorderRevamp.Designer.cs">
+      <DependentUpon>IntradayRecorderRevamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Switchboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Switchboard.Designer.cs">
+      <DependentUpon>Switchboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIUtils.cs" />
+    <EmbeddedResource Include="BuyerSellerPriceChart.resx">
+      <DependentUpon>BuyerSellerPriceChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataDownloader.resx">
+      <DependentUpon>DataDownloader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EODSnapshotViewer.resx">
+      <DependentUpon>EODSnapshotViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EODSnapshotDataManager.resx">
+      <DependentUpon>EODSnapshotDataManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntradayAggregateQuartiles.resx">
+      <DependentUpon>IntradayAggregateQuartiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntradayAggregateQuartilesGraph.resx">
+      <DependentUpon>IntradayAggregateQuartilesGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntradayBrowser.resx">
+      <DependentUpon>IntradayBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntradayDataCleaner.resx">
+      <DependentUpon>IntradayDataCleaner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntradayRecorder.resx">
+      <DependentUpon>IntradayRecorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntradayRecorderRevamp.resx">
+      <DependentUpon>IntradayRecorderRevamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Switchboard.resx">
+      <DependentUpon>Switchboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{ed1da51c-3e08-4d70-8061-9e13f40d3941}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{bc36472d-0870-4a6f-ab95-bfd53a84fc86}</Project>
+      <Name>DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProcessingLayer\ProcessingLayer.csproj">
+      <Project>{491de28d-4fef-4c18-b93d-11449f911c8b}</Project>
+      <Name>ProcessingLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
